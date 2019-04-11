@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Grid, Header, Icon, Image, Menu } from "semantic-ui-react";
+import { Grid, Header, Icon, Image, Menu, Button } from "semantic-ui-react";
+
 
 const HeaderBar = () => {
     return (
@@ -9,7 +10,7 @@ const HeaderBar = () => {
                     <Image width={50} height={50} src='https://react.semantic-ui.com/images/wireframe/image.png' />
                 </Grid.Column>
                 <Grid.Column computer={8} style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', verticalAlign: 'middle' }}>
-                    <span className="header-text btn">REQUEST EARLY ACCESS</span>
+                    <a href="https://abridged.typeform.com/to/r8M964"className="header-text btn" id="early">REQUEST EARLY ACCESS</a>
                 </Grid.Column>
             </Grid.Row>
         </Grid>
@@ -19,7 +20,7 @@ const HeaderBar = () => {
 const FooterBar = () => {
     return (
         <div id="basic-splash-footer">
-            <Grid columns='equal' verticalAlign="middle" style={{ marginTop: 0, height: '100%' }}>
+            {/* <Grid columns='equal' verticalAlign="middle" style={{ marginTop: 0, height: '100%' }}>
                 <Grid.Row >
                     <Grid.Column computer={13} tablet={12} mobile={6} >
                         <Image width={50} height={50} src='https://react.semantic-ui.com/images/wireframe/image.png' />
@@ -31,7 +32,7 @@ const FooterBar = () => {
                         <span className="footer-text btn">Privacy Policy</span>
                     </Grid.Column>
                 </Grid.Row>
-            </Grid>
+            </Grid> */}
         </div>
     )
 }
@@ -39,7 +40,6 @@ const FooterBar = () => {
 const sdkDesc = 'Our SDK gives developers of all experience levels standardized access to scalability and UX tools, lowering the learning curve and accelerating workflow.';
 const cliDesc = 'Our CLI makes it extremely easy to install the Web3 solutions best suited for your app to cut time from development to deployment.';
 const portalDesc = 'The Abridged portal is a subscription-based PaaS that provides analytics and product development resources for all apps developed with the Abridged SDK/CLI.'
-
 
 export default class BasicSplash extends Component {
 
@@ -49,6 +49,17 @@ export default class BasicSplash extends Component {
         this.state = {
             activeItem: 'sdk',
             menuDesc: sdkDesc
+        }
+    }
+
+    handleClick (e) {
+        switch(e.currentTarget.id) {
+            case 'early':
+                window.open('https://abridged.typeform.com/to/r8M964',"_self")
+                break;
+            case 'enroll':
+                window.open('https://abridged.typeform.com/to/RnFpLE',"_self")
+                break;
         }
     }
 
@@ -116,7 +127,7 @@ export default class BasicSplash extends Component {
                                     </Grid.Column>
                                 </Grid.Row>
                                 <Grid.Row className="section-row-2">
-                                    <span className="header-text btn">Request Early Access</span>
+                                    <Button onClick={this.handleClick} className="header-text btn" id="early">Request Early Access</Button>
                                 </Grid.Row>
                             </Grid>
                         </div>
@@ -130,9 +141,9 @@ export default class BasicSplash extends Component {
                             <span className="subheader">Create integrations that can gain exposure and potentially be used by every developer connected to the Abridged ecosystem.</span>
                         </div>
                         <div className="section-center">
-                            <span className="enrol-btn white-btn">ENROLL</span>
+                            <Button onClick={this.handleClick} className="btn enrol-btn white-btn" id ="enroll">ENROLL</Button>
                         </div>
-                        <div className="section" style={{ marginTop: 70 }}>
+                        {/* <div className="section" style={{ marginTop: 70 }}>
                             <span className="subheader">Next</span>
                             <h2>Request Early Access</h2>
                         </div>
@@ -141,7 +152,7 @@ export default class BasicSplash extends Component {
                                 <label className="bottom-text"> Sign up to get early developer access to Abridged</label>
                                 <Icon className="form-icon" disabled name='angle right' />
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <FooterBar />
