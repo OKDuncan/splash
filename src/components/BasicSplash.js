@@ -10,7 +10,7 @@ const HeaderBar = () => {
                     <Image width={50} height={50} src='https://react.semantic-ui.com/images/wireframe/image.png' />
                 </Grid.Column>
                 <Grid.Column computer={8} style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', verticalAlign: 'middle' }}>
-                    <a href="https://abridged.typeform.com/to/r8M964"className="header-text btn" id="early">REQUEST EARLY ACCESS</a>
+                    <a href="https://abridged.typeform.com/to/r8M964"className="header-text btn" id="early" style="color:#FFFFFF;" >REQUEST EARLY ACCESS</a>
                 </Grid.Column>
             </Grid.Row>
         </Grid>
@@ -88,9 +88,9 @@ export default class BasicSplash extends Component {
                     <div id="basic-splash">
                         <div className="header-container">
                             <Header as='h1' className="header">Bringing usability to Web 3.0</Header>
-                            <span className="subheader">The users want to use a great app.</span>
+                            {/* <span className="subheader">The users want to use a great app.</span>
                             <span className="subheader">You want to build a great app.</span>
-                            <span className="subheader">Don't let messy blockchain integrations get in the way either.</span>
+                            <span className="subheader">Don't let messy blockchain integrations get in the way either.</span> */}
                             <div className="divider" />
                         </div>
                         <div className="section">
@@ -138,7 +138,7 @@ export default class BasicSplash extends Component {
                         <div className="section">
                             <span className="subheader">Want to build integrations into the Abridged SDK?</span>
                             <h2>Enroll in our Builder Program</h2>
-                            <span className="subheader">Create integrations that can gain exposure and potentially be used by every developer connected to the Abridged ecosystem.</span>
+                            <span className="subheader">Create integrations to gain exposure to the Abridged ecosystem.</span>
                         </div>
                         <div className="section-center">
                             <Button onClick={this.handleClick} className="btn enrol-btn white-btn" id ="enroll">ENROLL</Button>
