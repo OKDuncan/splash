@@ -679,6 +679,21 @@
             border: 1px solid #27e774; 
             box-shadow: 2px 3px #bcbcbc;
         }
+
+        @media screen and (max-width: 991px) {
+            .section-column-desc {
+                width: 100% !important;
+                margin-top: 20px;
+            }
+
+            .section-grid {
+                width: 100% !important;
+            }
+
+            .header-text {
+                align-self: center !important;
+            }
+        }
     }
 
     .section-3 {
